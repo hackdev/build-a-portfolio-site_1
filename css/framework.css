@@ -1,0 +1,353 @@
+/*------Global styles------*/
+
+/*icon font for the logo*/
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+
+/*setting box sizing to include padding and border*/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/*overriding user agent styles*/
+* {
+	margin: 0;
+    padding: 0;
+}
+
+
+/*fonts*/
+h1 {
+	text-transform: uppercase;
+	font: 300 1.5em "Quicksand", sans-serif;
+	font-size: 6.5vw; /*preferred option; fallaback option above*/
+	color: #464786;
+}
+
+
+h2 {
+	font: 400 1.125em "Roboto", sans-serif;
+  	font-size: 3.5vw; /*preferred option; fallaback option above*/
+  	color: #333;
+}
+
+
+h3 {
+	font: 100 1.5em "Roboto", sans-serif;
+  	font-size: 5.5vw; /*preferred option; fallaback option above*/
+  	color: #666;
+}
+
+
+/*flexbox containers*/
+.container, .projects {
+	width: 100%;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+
+/*flex items*/
+.name, .logo, .hero, .project {
+	width: 100%;
+	order: 2;
+}
+
+
+/*making images responsive up to actual size*/
+img {
+    max-width: 100%;
+}
+
+
+/*projects list styling*/
+ul {
+    list-style-type: none;
+}
+
+
+
+/*------Header elements------*/
+
+/*center name*/
+.name {
+	text-align: center;
+	line-height: 1.5;
+	padding: 2em 3% 1em;
+}
+
+
+/*format logo*/
+.entypo-keyboard {
+	text-align: center;
+	font: 18vw/0.8 "entypo", sans-serif;
+	color: #464786;
+}
+
+
+/*hero image and copy styling*/
+.hero {
+	position: relative;
+	padding-top: 1em;
+}
+
+
+.hero img {
+	margin: 1em auto 0;
+}
+
+
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 2em;
+	height: 100%;
+	padding: 7% 3%;
+	text-align: center;
+}
+
+
+.hello {
+	display: block;
+    float: left;
+    width: 100%;
+
+	text-transform: uppercase;
+	text-shadow: 0 2px 0 rgba(154, 155, 195, 0.4);
+
+	font: 700 1.5em/1.2 "Roboto Condensed", sans-serif;
+  	font-size: 6.5vw; /*preferred option; fallaback option above*/
+  	color: #13144c;
+}
+
+
+.cohort {
+	display: block;
+	margin-top: 5%;
+    float: left;
+    width: 100%;
+
+	font: 400 1.125em/3 "Roboto", sans-serif;
+  	font-size: 3.5vw; /*preferred option; fallaback option above*/
+  	color: #2a2c6c;
+}
+
+
+
+/*------Portfolio elements------*/
+
+/*prevent ul and li from extending outside of container div in Firefox-- took me forever to figure this out--*/
+.project img {
+    width: 100%;
+    border: 1px solid #333;
+}
+
+
+/*pad portfolio heading*/
+h3 {
+	text-align: left;
+	line-height: 1.5;
+	padding: 1em 3% 0.5em;
+}
+
+
+/*pad project*/
+.project {
+	margin: 0 3% 3em;
+}
+
+
+/*project name formatting*/
+.project-name {
+	display: block;
+    float: left;
+    width: 100%;
+
+	text-transform: uppercase;
+	text-align: center;
+
+	font: 400 1.5em/1.5 "Roboto", sans-serif;
+  	font-size: 6vw; /*preferred option; fallaback option above*/
+  	color: #464786;
+}
+
+
+/*project url formatting*/
+.project-url {
+	display: block;
+    float: left;
+    width: 100%;
+
+	text-align: center;
+
+	font: 300 1em/1.5 "Roboto Condensed", sans-serif;
+  	font-size: 5vw; /*preferred option; fallaback option above*/
+  	color: #666;
+}
+
+
+/*making links pretty*/
+.project-url a {
+	color: #666;
+    text-decoration: none;
+}
+
+
+.project-url a:hover, .project-url a:active {
+	color: #333;
+}
+
+
+
+/*------Media queries------*/
+
+/*font resizing, logo and name repositioning for viewports larger than 500px*/
+@media only screen and (min-width: 500px){
+	.name h1 {
+  		font-size: 1.5em;
+	}
+
+
+	.name h2 {
+  		font-size: 1.3em;
+	}
+
+
+	h3 {
+  		font-size: 1.5em;
+	}
+
+
+ 	.entypo-keyboard {
+ 		font-size: 5em;
+ 		margin-left: 3%;
+ 		text-align: left;
+ 	}
+
+
+    .logo {
+    	padding: 2em 3% 1em;
+    	order: 1;
+    	width: 20%;
+    }
+
+
+	.name {
+		width: 80%;
+		text-align: right;
+		padding-left: 0;
+	}
+
+
+	.container {
+		align-items: center;
+	}
+
+
+	.hero {
+
+		border-top: 3px solid grey;
+		padding-top: 1em;
+	}
+
+
+	/*prevent ul and li from extending outside of container div in Firefox-- took me forever to figure this out--*/
+	.project img {
+    	width: 100%;
+	}
+
+
+	.project-name {
+  		font-size: 1.5em;
+	}
+
+
+	.project-url {
+  		font-size: 1em;
+	}
+}
+
+
+/*font resizing for larger viewports*/
+@media only screen and (min-width: 616px){
+	.cohort {
+		font-size: 1.3em;
+	}
+}
+
+
+/*project layout change for viewports larger than 616px*/
+@media only screen and (min-width: 616px) and (max-width: 949px){
+	.project {
+		position: relative;
+	}
+
+
+	.project img{
+		width: 50%;
+		max-width: 600px;
+	}
+
+
+	.project-name{
+		float: right;
+		width: 50%;
+
+		text-align: left;
+		padding: 1em 0.5em 0.5em;
+	}
+
+
+	.project-url{
+		width: 50%;
+
+		position: absolute;
+		right: 0;
+		top: 4.5em;
+		text-align: left;
+		padding: 0em 1em 0.5em;
+	}
+}
+
+
+/*project layout change for viewports larger than 950px*/
+@media only screen and (min-width: 950px){
+	h3 {
+		padding: 1em 2.5% 0.5em; /*portfolio heading padding change*/
+	}
+
+
+	.project {
+		margin: 0 0 3em 2.5%;
+		width: 30%;
+	}
+
+
+	li:last-of-type {
+		margin: 0 2.5% 3em;
+	}
+}
+
+
+/*max size for large viewports*/
+@media only screen and (min-width: 1200px){
+	.container {
+		width: 1200px;
+		margin: 0 auto;
+	}
+
+
+	.hello {
+		font-size: 5em;
+	}
+}
